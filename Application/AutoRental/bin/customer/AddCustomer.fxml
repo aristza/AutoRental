@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customer.AddCustomer">
+   <children>
+      <SplitPane dividerPositions="0.5062761506276151" orientation="VERTICAL" prefHeight="480.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="236.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                      <AnchorPane prefHeight="429.0" prefWidth="631.0">
+                           <children>
+                              <VBox prefHeight="429.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="160.0" prefWidth="62.0" text="Ταυτότητα:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="personalId" maxWidth="-Infinity" minWidth="150.0" prefWidth="480.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="160.0" prefWidth="40.0" text="Όνομα:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="firstName" maxWidth="-Infinity" minWidth="150.0" prefWidth="480.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="45.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="160.0" prefWidth="53.0" text="Επώνυμο:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="lastName" maxWidth="-Infinity" minWidth="150.0" prefWidth="480.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="115.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="160.0" prefWidth="38.0" text="Φύλλο:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <RadioButton fx:id="genderM" mnemonicParsing="false" selected="true" text="Άνδρας">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="gender" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="genderF" layoutX="554.0" layoutY="15.0" mnemonicParsing="false" text="Γυναίκα" toggleGroup="$gender" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="160.0" prefWidth="38.0" text="Ημερομηνία Γέννησης:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <DatePicker fx:id="birthDate" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="185.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="160.0" prefWidth="59.0" text="Τηλέφωνο:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="phone" maxWidth="-Infinity" minWidth="150.0" prefWidth="480.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="220.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="160.0" prefWidth="36.0" text="E-mail:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="email" maxWidth="-Infinity" minWidth="150.0" prefWidth="480.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="177.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="160.0" prefWidth="52.0" text="Δίπλωμα:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="licence" maxWidth="-Infinity" minWidth="150.0" prefWidth="480.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="290.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="160.0" prefWidth="34.0" text="Χώρα:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="country" maxWidth="-Infinity" minWidth="150.0" prefWidth="480.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="325.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="160.0" prefWidth="32.0" text="Πόλη:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="town" maxWidth="-Infinity" minWidth="150.0" prefWidth="480.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="360.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="160.0" prefWidth="60.0" text="Διεύθυνση:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="address" maxWidth="-Infinity" minWidth="150.0" prefWidth="480.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="282.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="160.0" prefWidth="129.0" text="Ταχυδρομικός Κώδικας:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="zipCode" maxWidth="-Infinity" minWidth="150.0" prefWidth="480.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="-Infinity" prefHeight="17.0" prefWidth="638.0">
+               <children>
+                  <HBox maxHeight="-Infinity" prefHeight="35.0" prefWidth="638.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleDeleteButtonClicked" text="Διαγραφή" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#handleOkButtonClicked" text="OK" />
+                        <Button fx:id="applyButton" mnemonicParsing="false" onAction="#handleApplyButtonClicked" text="Εφαρμογή" />
+                        <Button mnemonicParsing="false" onAction="#handlePrintButtonClicked" text="Εκτύπωση" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

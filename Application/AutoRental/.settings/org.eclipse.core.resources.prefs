@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/application/Controller.java=UTF-8
+encoding//src/car/AddCar.java=UTF-8
+encoding//src/car/Car.java=UTF-8
+encoding//src/customer/AddCustomer.java=UTF-8
+encoding//src/customer/Customer.java=UTF-8
+encoding//src/customer/CustomerManager.java=UTF-8
+encoding//src/reservation/AddReservation.java=UTF-8
+encoding//src/reservation/Reservation.java=UTF-8
+encoding//src/service/AddService.java=UTF-8
+encoding//src/service/Service.java=UTF-8

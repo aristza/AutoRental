@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reservation.AddReservation">
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="480.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ScrollPane fitToWidth="true" prefHeight="437.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                      <AnchorPane prefHeight="431.0" prefWidth="636.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="2.0" prefWidth="636.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="-Infinity" prefWidth="110.0" text="Από:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <DatePicker fx:id="fromDay" />
+                                          <ComboBox fx:id="fromTime" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="2.0" prefWidth="636.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="-Infinity" prefWidth="110.0" text="Μέχρι:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <DatePicker fx:id="toDay" />
+                                          <ComboBox fx:id="toTime" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="48.0" prefHeight="2.0" prefWidth="636.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="-Infinity" prefWidth="110.0" text="Παράδοση:" />
+                                          <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="fromPlace" prefWidth="341.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="86.0" prefHeight="2.0" prefWidth="636.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="-Infinity" prefWidth="110.0" text="Παραλαβή:" />
+                                          <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="toPlace" prefWidth="341.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="121.0" prefHeight="2.0" prefWidth="636.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="-Infinity" prefWidth="110.0" text="Σύνολο Ημερών:" />
+                                          <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="days" prefWidth="341.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="156.0" prefHeight="2.0" prefWidth="636.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="-Infinity" prefWidth="110.0" text="Αυτοκίνητο:" />
+                                          <Region prefHeight="200.0" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="carDetailsButton" mnemonicParsing="false" onAction="#handleCarDetailsButtonClicked" text="Λεπτομέρειες" />
+                                          <TextField fx:id="car" prefWidth="220.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="191.0" prefHeight="2.0" prefWidth="636.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="-Infinity" prefWidth="110.0" text="Πελάτης:" />
+                                          <Region prefHeight="25.0" HBox.hgrow="ALWAYS" />
+                                          <Button mnemonicParsing="false" onAction="#handleNewCustomerButtonClicked" text="Νέος Πελάτης" />
+                                          <Button fx:id="customerDetailsButton" mnemonicParsing="false" onAction="#handleCustomerDetailsButtonClicked" text="Λεπτομέρειες" />
+                                          <TextField fx:id="customerName" layoutX="397.0" layoutY="15.0" prefHeight="25.0" prefWidth="220.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="226.0" prefHeight="2.0" prefWidth="636.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="-Infinity" prefWidth="110.0" text="Παραδόθηκε:" />
+                                          <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                          <RadioButton fx:id="deliveredY" mnemonicParsing="false" text="Ναι">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="deliveredGroup" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="deliveredN" layoutX="554.0" layoutY="15.0" mnemonicParsing="false" selected="true" text="Όχι" toggleGroup="$deliveredGroup" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="261.0" prefHeight="2.0" prefWidth="636.0" spacing="10.0">
+                                       <children>
+                                          <Label minWidth="-Infinity" prefWidth="110.0" text="Παρελήφθη:" />
+                                          <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                          <RadioButton fx:id="returnedY" mnemonicParsing="false" text="Ναι">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="returnedGroup" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="returnedN" layoutX="554.0" layoutY="15.0" mnemonicParsing="false" selected="true" text="Όχι" toggleGroup="$returnedGroup" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="-Infinity" prefHeight="10.0" prefWidth="638.0">
+               <children>
+                  <HBox layoutY="12.0" prefHeight="47.0" prefWidth="638.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleDeleteButtonClicked" text="Διαγραφή" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#handleOkButtonClicked" text="OK" />
+                        <Button fx:id="applyButton" mnemonicParsing="false" onAction="#handleApplyButtonClicked" text="Εφαρμογή" />
+                        <Button mnemonicParsing="false" onAction="#handlePrintButtonClicked" text="Εκτύπωση" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
